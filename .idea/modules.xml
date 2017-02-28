@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZiMu.iml" filepath="$PROJECT_DIR$/ZiMu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zimu.iml" filepath="$PROJECT_DIR$/Zimu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
