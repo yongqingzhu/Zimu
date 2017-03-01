@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">ZiMu</string>
+    <string name="expert_subscribe_toolbar">咨询</string>
+    <string name="city_orientation_edittext">请输入城市名称</string>
+    <string name="current_orientation_textview">当前位置</string>
+    <string name="current_orientation_button">杭州市</string>
+    <string name="city_hot_textview">热门城市</string>
+    <string name="city_hot_button">北京市</string>
+    <string name="foreign_rb">国外</string>
+    <string name="inland_rb">国内</string>
+    <string name="address_rb">杭州</string>
+    <string name="field_rb">领域</string>
+    <string name="price_rb">价格</string>
+    <string name="more_rb">更多</string>
+
 </resources>

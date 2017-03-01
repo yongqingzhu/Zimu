@@ -3,4 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="black">#FF1D1D1D</color>
+    <color name="tv_money_color">#efa81b</color>
 </resources>

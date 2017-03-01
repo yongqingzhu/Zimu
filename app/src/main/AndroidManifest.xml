@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.City_Orientation_Activity" android:windowSoftInputMode="stateAlwaysHidden">
+
+        </activity>
     </application>
 
 </manifest>

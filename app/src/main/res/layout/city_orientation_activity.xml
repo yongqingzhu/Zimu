@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    >
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_margin="10dip"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_inland"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/inland_rb"
+            android:checked="true"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_foreign"
+            android:layout_height="wrap_content"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:text="@string/foreign_rb"
+            android:button="@null"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip"
+           />
+    </RadioGroup>
+</LinearLayout>
+
+</android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/framelayout_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
