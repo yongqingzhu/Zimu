@@ -17,9 +17,10 @@
         android:paddingLeft="10dp"
         android:text="@string/current_orientation_textview"
         android:gravity="center_vertical"/>
-    <Button android:layout_height="35dp"
+    <Button
+        android:id="@+id/bt_prent"
+        android:layout_height="35dp"
             android:layout_width="70dp"
-
             android:text="@string/current_orientation_textview"
             android:layout_marginLeft="10px"/>
     <TextView android:layout_height="30dp"

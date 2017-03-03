@@ -1,7 +1,6 @@
 package com.zimu21.zimu.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -10,14 +9,14 @@ import android.util.Log;
 import android.widget.RadioGroup;
 
 import com.zimu21.zimu.R;
-import com.zimu21.zimu.fragment.ExpertSubscribeFragment;
-import com.zimu21.zimu.fragment.FragmentInland;
+import com.zimu21.zimu.fragment.Correlation_Class;
+import com.zimu21.zimu.fragment.MySelf_Message;
 
 /**
- * Created by Administrator on 2017/2/27.
+ * Created by Administrator on 2017/3/1.
  */
 
-public class City_Orientation_Activity extends FragmentActivity {
+ public class ExpertDetaityActivity extends FragmentActivity {
 
     private Fragment mCurrentFragment;
     private FragmentManager mFragmentManager;
@@ -25,23 +24,21 @@ public class City_Orientation_Activity extends FragmentActivity {
     private RadioGroup radioGroup;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expert_details);
         initViews();
-
     }
 
 
-
-
     public void initViews(){
-       final FragmentInland fragmentInland = new FragmentInland();
+        // final FragmentForeign fragmentForeign = new FragmentForeign();
+        final Correlation_Class correlation_class = new Correlation_Class();
 
-       final ExpertSubscribeFragment expertSubscribeFragment = new ExpertSubscribeFragment();
+        final MySelf_Message mySelf_message = new MySelf_Message();
 
         mFragmentManager = getSupportFragmentManager();
-        showFragment(fragmentInland);
+        showFragment(mySelf_message);
         radioGroup = (RadioGroup) findViewById(R.id.rg);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -49,12 +46,12 @@ public class City_Orientation_Activity extends FragmentActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
                 switch (checkedId) {
-                    case R.id.rb_inland:
-                        showFragment(fragmentInland);
+                    case R.id.myself_message:
+                        showFragment(mySelf_message);
 
                         break;
-                    case R.id.rb_foreign:
-                        showFragment(expertSubscribeFragment);
+                    case R.id.correlation_class:
+                        showFragment(correlation_class);
                         break;
                     default:
                         break;
@@ -84,5 +81,4 @@ public class City_Orientation_Activity extends FragmentActivity {
         fragmentTransaction.commit();
         mCurrentFragment = fragment;
     }
-
 }

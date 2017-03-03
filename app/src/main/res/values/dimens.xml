@@ -3,6 +3,39 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="expert_subscribe_toolbar_padding">6dp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="view">6dp</dimen>
+    <dimen name="view_width">6dp</dimen>
+    <dimen name="view_height">6dp</dimen>
+
+    <dimen name="activity_linearlayout_width">300dp</dimen>
+    <dimen name="activity_linearlayout_height">300dp</dimen>
+
+
+    <dimen name="imageview_width_300">300dp</dimen>
+    <dimen name="imageview_height_300">300dp</dimen>
+    <dimen name="imageview_width_100">100dp</dimen>
+    <dimen name="imageview_height_100">100dp</dimen>
+    <dimen name="imageview_width_120">120dp</dimen>
+    <dimen name="imageview_height_120">120dp</dimen>
+    <dimen name="imageview_width_50">50dp</dimen>
+    <dimen name="imageview_height_50">50dp</dimen>
+    <dimen name="imageview_width_80">80dp</dimen>
+    <dimen name="imageview_height_80">80dp</dimen>
+
+
+    <dimen name="textSize_16">16dp</dimen>
+    <dimen name="textSize_20">20dp</dimen>
+    <dimen name="textSize_22">22dp</dimen>
+    <dimen name="textSize_26">26dp</dimen>
+    <dimen name="textSize_28">28dp</dimen>
+    <dimen name="textSize_30">30dp</dimen>
+    <dimen name="textSize_32">32dp</dimen>
+    <dimen name="textSize_34">34dp</dimen>
+    <dimen name="textSize_36">36dp</dimen>
+    <dimen name="textSize_38">38dp</dimen>
+    <dimen name="textSize_40">40dp</dimen>
+
 
 
     <dimen name="expert_subscribe_toolbar_textsize">22dp</dimen>

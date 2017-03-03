@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.zimu21.zimu.R;
@@ -15,7 +16,7 @@ import java.util.List;
 /**
  * Created by kun on 2016/10/26.
  */
-public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener{
+public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private List<CitiesBean.DatasBean> cities;
@@ -23,6 +24,12 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private final int HEAD = 0;
     private final int WORD = 1;
     private final int CITY = 2;
+
+    public void setOnCliclItemListener(OnCliclItemListener onCliclItemListener) {
+        mOnCliclItemListener = onCliclItemListener;
+    }
+
+    private OnCliclItemListener mOnCliclItemListener;
 
     public CitiesAdapter(Context context, List<CitiesBean.DatasBean> cities){
         this.context = context;
@@ -108,15 +115,23 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     }
 
+     class HeadViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        private Button bt_prent;
+         public int position;
 
-
-
-    public static class HeadViewHolder extends RecyclerView.ViewHolder {
         public HeadViewHolder(View view) {
             super(view);
+            bt_prent = (Button) view.findViewById(R.id.bt_prent);
+            bt_prent.setOnClickListener(this);
+        }
+        @Override
+        public void onClick(View v) {
+            if (mOnCliclItemListener !=null){
+                mOnCliclItemListener.onClickItemListener(position);
+            }
         }
     }
-    public static class WordViewHolder extends RecyclerView.ViewHolder {
+     class WordViewHolder extends RecyclerView.ViewHolder {
         TextView textWord;
         public WordViewHolder(View view) {
             super(view);
@@ -124,7 +139,7 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         }
     }
-    public static class CityViewHolder extends RecyclerView.ViewHolder {
+     class CityViewHolder extends RecyclerView.ViewHolder {
 
         TextView textCity;
         public CityViewHolder(View view) {
@@ -133,11 +148,10 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
-    @Override
-    public void onClick(View v) {
 
+public  interface OnCliclItemListener{
+        void onClickItemListener(int position);
     }
-
 
 
 

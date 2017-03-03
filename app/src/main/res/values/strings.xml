@@ -12,5 +12,7 @@
     <string name="field_rb">领域</string>
     <string name="price_rb">价格</string>
     <string name="more_rb">更多</string>
+    <string name="myself_message">个人信息</string>
+    <string name="correlation_class">相关课程</string>
 
 </resources>

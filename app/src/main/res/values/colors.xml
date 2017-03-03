@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="black">#FF1D1D1D</color>
     <color name="tv_money_color">#efa81b</color>
+    <color name="_white">#ffffff</color>
+    <color name="_hoary">#f2f2f2</color>
+
 </resources>

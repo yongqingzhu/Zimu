@@ -3,6 +3,9 @@ package com.zimu21.zimu.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,11 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 
 import com.zimu21.zimu.R;
+import com.zimu21.zimu.adapter.ExpertSubscribeAdapter;
+import com.zimu21.zimu.bean.ExpertSubscribe;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/2/28.
@@ -25,6 +33,10 @@ public class ExpertSubscribeFragment extends Fragment implements View.OnClickLis
     private ImageView arrow2;
     private ImageView arrow3;
     private ImageView arrow4;
+    private RecyclerView mRecyclerView;
+    private List<ExpertSubscribe> mList;
+    private ExpertSubscribeAdapter mAdapter;
+
 
     @Nullable
     @Override
@@ -33,9 +45,47 @@ public class ExpertSubscribeFragment extends Fragment implements View.OnClickLis
         initViews(view);
         initLinster();
         initTit();
+        initData();
+        initRecycler();
 
         return view;
     }
+    public void initRecycler(){
+        mAdapter = new ExpertSubscribeAdapter(mList,getContext());
+        // 设置LinearLayoutManager
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        // 设置ItemAnimator
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        // 设置固定大小
+        mRecyclerView.setHasFixedSize(true);
+
+
+        mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter.setOnClickItemListener(new ExpertSubscribeAdapter.OnClickItemListener() {
+            @Override
+            public void onClickItemListener(int position) {
+
+
+            }
+        });
+
+
+    }
+    public void initData(){
+        String url ="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png";
+        mList = new ArrayList<>();
+        for (int i=0; i<50; i++){
+            ExpertSubscribe subscribe = new ExpertSubscribe(url,"zhasng"+i,"bbb"+i,"aaaa"+i,"ccc"+i,"dddd"+i);
+
+        mList.add(subscribe);
+
+
+        }
+
+    }
+
+
 
     public void initViews(View view) {
         rbBank = (RadioButton)view.findViewById(R.id.rb_locale);
@@ -46,12 +96,15 @@ public class ExpertSubscribeFragment extends Fragment implements View.OnClickLis
         arrow2 = (ImageView) view.findViewById(R.id.arrow2);
         arrow3 = (ImageView) view.findViewById(R.id.arrow3);
         arrow4 = (ImageView) view.findViewById(R.id.arrow4);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.lv_expert);
+
     }
     private void initLinster(){
         rbMoney.setOnClickListener(this);
         rbTime.setOnClickListener(this);
         rbRange.setOnClickListener(this);
         rbBank.setOnClickListener(this);
+
     }
 
     private void initTit() {
