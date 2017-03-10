@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string-array name="arrTabTitles">
+       <item>推荐</item>
+       <item>文章</item>
+       <item>测评</item>
+       <item>课程</item>
+       <item>FM</item>
+       <item>书籍</item>
+   </string-array>
+</resources>

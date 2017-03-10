@@ -10,8 +10,10 @@ import android.util.Log;
 import android.widget.RadioGroup;
 
 import com.zimu21.zimu.R;
-import com.zimu21.zimu.fragment.ExpertSubscribeFragment;
+import com.zimu21.zimu.ZimuApplication;
+import com.zimu21.zimu.fragment.FragmentForeign;
 import com.zimu21.zimu.fragment.FragmentInland;
+import com.zimu21.zimu.widge.LocationCity;
 
 /**
  * Created by Administrator on 2017/2/27.
@@ -19,26 +21,26 @@ import com.zimu21.zimu.fragment.FragmentInland;
 
 public class City_Orientation_Activity extends FragmentActivity {
 
+
     private Fragment mCurrentFragment;
     private FragmentManager mFragmentManager;
 
     private RadioGroup radioGroup;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expert_details);
-        initViews();
+        setContentView(R.layout.city_orientation_activity);
+      initViews();
+
 
     }
-
-
-
 
     public void initViews(){
        final FragmentInland fragmentInland = new FragmentInland();
 
-       final ExpertSubscribeFragment expertSubscribeFragment = new ExpertSubscribeFragment();
+       final FragmentForeign fragmentForeign = new FragmentForeign();
 
         mFragmentManager = getSupportFragmentManager();
         showFragment(fragmentInland);
@@ -51,10 +53,9 @@ public class City_Orientation_Activity extends FragmentActivity {
                 switch (checkedId) {
                     case R.id.rb_inland:
                         showFragment(fragmentInland);
-
                         break;
                     case R.id.rb_foreign:
-                        showFragment(expertSubscribeFragment);
+                        showFragment(fragmentForeign);
                         break;
                     default:
                         break;
@@ -76,7 +77,7 @@ public class City_Orientation_Activity extends FragmentActivity {
         if (fragment.isAdded()) {
             fragmentTransaction.show(fragment);
         } else {
-            fragmentTransaction.add(R.id.framelayout, fragment);
+            fragmentTransaction.add(R.id.framelayout_city, fragment);
         }
         if (mCurrentFragment != null) {
             fragmentTransaction.hide(mCurrentFragment);
@@ -85,4 +86,10 @@ public class City_Orientation_Activity extends FragmentActivity {
         mCurrentFragment = fragment;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        LocationCity.getLocation(ZimuApplication.getApplication()).destroy();
+
+    }
 }

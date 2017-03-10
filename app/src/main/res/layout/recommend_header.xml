@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+
+              android:layout_margin="@dimen/layout_margin_10">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="咨询专家"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_30"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/paddingTop_5"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/imageview_width_80"
+                    android:layout_height="@dimen/imageview_height_120"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@mipmap/ic_launcher"
+
+                    android:id="@+id/expert_icon"/>
+
+                <TextView
+                    android:text="专家名称"
+                    android:textSize="@dimen/textSize_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/expert_icon"
+                    android:layout_toEndOf="@+id/expert_icon"
+                    android:textColor="@color/black"
+                    android:id="@+id/text_name"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/layout_margin_10"
+                    android:layout_below="@+id/text_name"
+                    android:layout_toRightOf="@+id/expert_icon"
+                    android:layout_toEndOf="@+id/expert_icon"
+                    android:id="@+id/linearLayout2">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding"
+                        android:textSize="@dimen/textSize_20"
+                        android:textColor="@color/black"
+                        android:text="agadf"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_20"
+                        android:text="agadf"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/padding"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_20"
+                        android:text="agadf"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/expert_icon"
+                    android:layout_toEndOf="@+id/expert_icon"
+                    android:layout_alignBottom="@+id/expert_icon"
+                    android:layout_below="@+id/linearLayout2">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="aghggadhh"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="aghggadhh"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:text="aghggadhh"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+</LinearLayout>

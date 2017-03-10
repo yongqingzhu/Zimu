@@ -3,13 +3,43 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="expert_subscribe_toolbar_padding">6dp</dimen>
+
     <dimen name="padding">4dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="paddingBottom_5">5dp</dimen>
+    <dimen name="paddingBottom_10">10dp</dimen>
+    <dimen name="paddingTop_5">5dp</dimen>
+    <dimen name="paddingTop_10">10dp</dimen>
+    <dimen name="paddingTop_15">15dp</dimen>
+    <dimen name="paddingTop_20">20dp</dimen>
+    <dimen name="paddingLeft_5">5dp</dimen>
+    <dimen name="paddingLeft_10">10dp</dimen>
+    <dimen name="paddingLeft_15">15dp</dimen>
+    <dimen name="paddingLeft_20">20dp</dimen>
+    <dimen name="paddingRight_5">5dp</dimen>
+    <dimen name="paddingRight_10">10dp</dimen>
+    <dimen name="paddingRight_15">15dp</dimen>
+    <dimen name="paddingRight_20">20dp</dimen>
+
+
     <dimen name="view">6dp</dimen>
     <dimen name="view_width">6dp</dimen>
     <dimen name="view_height">6dp</dimen>
 
+    <dimen name="layout_marginRight_10">10dp</dimen>
+    <dimen name="layout_marginTop_10">10dp</dimen>
+    <dimen name="layout_marginBottom_10">10dp</dimen>
+    <dimen name="layout_marginLeft_10">10dp</dimen>
+    <dimen name="layout_margin_10">10dp</dimen>
+
     <dimen name="activity_linearlayout_width">300dp</dimen>
     <dimen name="activity_linearlayout_height">300dp</dimen>
+
+    <dimen name="linearlayout_width_0">0dp</dimen>
+    <dimen name="linearlayout_height_0">0dp</dimen>
+
+    <dimen name="layout_weight_1">1dp</dimen>
 
 
     <dimen name="imageview_width_300">300dp</dimen>
@@ -35,7 +65,6 @@
     <dimen name="textSize_36">36dp</dimen>
     <dimen name="textSize_38">38dp</dimen>
     <dimen name="textSize_40">40dp</dimen>
-
 
 
     <dimen name="expert_subscribe_toolbar_textsize">22dp</dimen>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.zimu21.zimu.activity.City_Orientation_Activity;
+import com.zimu21.zimu.activity.SeekActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,9 +15,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void click(View view){
-        Intent intent = new Intent(this, City_Orientation_Activity.class);
-        startActivity(intent);
 
+    public void click(View view){
+        Intent intent = new Intent(this, SeekActivity.class);
+        startActivity(intent);
     }
+
+
 }

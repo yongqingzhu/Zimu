@@ -12,10 +12,7 @@ import android.view.View;
 import com.zimu21.zimu.utiils.DensityUtil;
 
 
-/**
- * Created by kun on 2016/10/26.
- * 快速索引
- */
+
 public class QuickIndexView extends View {
 
     private final static String[] WORDS = {"当","热","A","B","C","D","E","F","G","H","I","J",

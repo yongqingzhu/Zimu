@@ -32,7 +32,6 @@ import com.zimu21.zimu.fragment.MySelf_Message;
 
 
     public void initViews(){
-        // final FragmentForeign fragmentForeign = new FragmentForeign();
         final Correlation_Class correlation_class = new Correlation_Class();
 
         final MySelf_Message mySelf_message = new MySelf_Message();
@@ -73,7 +72,7 @@ import com.zimu21.zimu.fragment.MySelf_Message;
         if (fragment.isAdded()) {
             fragmentTransaction.show(fragment);
         } else {
-            fragmentTransaction.add(R.id.framelayout, fragment);
+            fragmentTransaction.add(R.id.framelayout_ex, fragment);
         }
         if (mCurrentFragment != null) {
             fragmentTransaction.hide(mCurrentFragment);

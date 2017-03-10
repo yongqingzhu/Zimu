@@ -14,5 +14,25 @@
     <string name="more_rb">更多</string>
     <string name="myself_message">个人信息</string>
     <string name="correlation_class">相关课程</string>
+    <string name="seek_Button_text">取消</string>
+    <string name="searchView_hit_text">请输入搜索内容</string>
+    <string name="recommend_text_rb">推荐</string>
+    <string name="article_text_rb">文章</string>
+    <string name="appraisal_text_rb">测评</string>
+    <string name="class_text_rb">课程</string>
+    <string name="fm_text_rb">FM</string>
+    <string name="books_text_rb">书籍</string>
+    
+    <string name="event_theme">活动主题</string>
+
+
+    <string name="tv_key_apply_event">一键报名</string>
+    <string name="tv_nopoplefull_event">●人不满原路退款</string>
+    <string name="tv_poplefull_event">●人满即可举办活动</string>
+    <string name="tv_invite_event">●邀请好友报名</string>
+    <string name="apply_notice_event">报名须知</string>
+    <string name="tv_introduce_event">活动简介</string>
+    <string name="tv_title_event">标题</string>
+
 
 </resources>

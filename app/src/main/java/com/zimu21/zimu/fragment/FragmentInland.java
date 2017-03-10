@@ -1,13 +1,17 @@
 package com.zimu21.zimu.fragment;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,11 +22,13 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.zimu21.zimu.Data;
 import com.zimu21.zimu.R;
+import com.zimu21.zimu.ZimuApplication;
 import com.zimu21.zimu.adapter.CitiesAdapter;
 import com.zimu21.zimu.bean.CitiesBean;
 import com.zimu21.zimu.bean.CityLocation;
 import com.zimu21.zimu.http.OkHttpHelper;
 import com.zimu21.zimu.view.QuickIndexView;
+import com.zimu21.zimu.widge.LocationCity;
 
 import java.util.List;
 
@@ -39,7 +45,7 @@ public class FragmentInland extends Fragment {
     private String locationString, keyString, questURL;
     private OkHttpHelper httpHelper = OkHttpHelper.getInstance();
     private List<CityLocation> mCityLocations;
-
+    private static final int WRITE_COARSE_LOCATION_REQUEST_CODE = 1;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -52,6 +58,7 @@ public class FragmentInland extends Fragment {
         View view = inflater.inflate(R.layout.fragment_inland, null);
         initView(view);
         initEvent();
+        openGPSSettings();
         return view;
     }
 
@@ -69,7 +76,8 @@ public class FragmentInland extends Fragment {
         adapter.setOnCliclItemListener(new CitiesAdapter.OnCliclItemListener() {
             @Override
             public void onClickItemListener(int position) {
-                openGPSSettings();
+              openGPSSettings();
+                adapter.notifyDataSetChanged();
             }
         });
     }
@@ -106,7 +114,7 @@ public class FragmentInland extends Fragment {
         LocationManager alm = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
         if (alm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)) {
             Toast.makeText(mContext, "GPS模块正常", Toast.LENGTH_SHORT).show();
-           // doWork();
+            getLocation();
             return;
         } else {
             Toast.makeText(mContext, "请开启GPS！", Toast.LENGTH_SHORT).show();
@@ -114,7 +122,19 @@ public class FragmentInland extends Fragment {
             startActivityForResult(intent, 0); // 此为设置完成后返回到获取界面
         }
     }
+    public void getLocation(){
+        if (ContextCompat.checkSelfPermission(ZimuApplication.getApplication(),
+                Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]
+                    {Manifest.permission.ACCESS_COARSE_LOCATION}, WRITE_COARSE_LOCATION_REQUEST_CODE);//自定义的code
+        }
+            LocationCity.getLocation(ZimuApplication.getApplication()).initLocation();
+    }
 
-
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        LocationCity.getLocation(ZimuApplication.getApplication()).destroy();
+    }
 }

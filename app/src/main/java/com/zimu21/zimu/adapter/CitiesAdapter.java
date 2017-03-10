@@ -9,7 +9,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.zimu21.zimu.R;
+import com.zimu21.zimu.ZimuApplication;
 import com.zimu21.zimu.bean.CitiesBean;
+import com.zimu21.zimu.widge.LocationCity;
 
 import java.util.List;
 
@@ -94,6 +96,7 @@ public class CitiesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         int count = 0;
         if(position==count){
             HeadViewHolder headViewHolder = (HeadViewHolder) holder;
+            headViewHolder.bt_prent.setText(LocationCity.getLocation(ZimuApplication.getApplication()).city);
         }
         for(int i = 0; i < cities.size(); i++){
             count++;
