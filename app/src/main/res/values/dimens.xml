@@ -55,6 +55,8 @@
 
 
     <dimen name="textSize_16">16dp</dimen>
+    <dimen name="textSize_18">18dp</dimen>
+
     <dimen name="textSize_20">20dp</dimen>
     <dimen name="textSize_22">22dp</dimen>
     <dimen name="textSize_26">26dp</dimen>

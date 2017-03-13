@@ -32,6 +32,8 @@
             android:layout_toRightOf="@+id/imageView3"
             android:layout_toEndOf="@+id/imageView3"
             android:padding="@dimen/padding"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:textSize="@dimen/textSize_20"
             android:id="@+id/textView"/>
 
@@ -44,6 +46,8 @@
             android:layout_toEndOf="@+id/imageView3"
             android:padding="@dimen/padding"
             android:textSize="@dimen/textSize_16"
+            android:maxLines="1"
+            android:ellipsize="end"
             android:id="@+id/textView2"
             />
 
@@ -140,7 +144,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="@dimen/padding"
-    android:text="ahgl;akdkh;ladkh;ll'adhkl;fdsk"
+    android:maxLines="1"
+    android:ellipsize="end"
     />
     <View
         android:layout_width="match_parent"
@@ -150,8 +155,9 @@
     <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:maxLines="1"
+    android:ellipsize="end"
     android:padding="@dimen/padding"
-    android:text="ahgl;akdkh;ladkh;ll'adhkl;fdsk"
     />
     <LinearLayout
         android:layout_width="match_parent"
@@ -163,7 +169,7 @@
             android:padding="@dimen/padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="查看太多"/>
+            android:text="查看更多"/>
 
     </LinearLayout>
 

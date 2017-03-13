@@ -28,7 +28,7 @@ import com.zimu21.zimu.bean.CitiesBean;
 import com.zimu21.zimu.bean.CityLocation;
 import com.zimu21.zimu.http.OkHttpHelper;
 import com.zimu21.zimu.view.QuickIndexView;
-import com.zimu21.zimu.widge.LocationCity;
+import com.zimu21.zimu.widget.LocationCity;
 
 import java.util.List;
 

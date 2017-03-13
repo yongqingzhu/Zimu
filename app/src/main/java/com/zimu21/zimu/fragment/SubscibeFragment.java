@@ -1,65 +1,59 @@
-package com.zimu21.zimu.activity;
+package com.zimu21.zimu.fragment;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 import com.zimu21.zimu.R;
-import com.zimu21.zimu.fragment.MySelf_Message;
 
 /**
- * Created by Administrator on 2017/3/1.
+ * Created by Administrator on 2017/3/10.
  */
 
- public class ExpertDetaityActivity extends FragmentActivity {
-
+public class SubscibeFragment extends Fragment {
     private Fragment mCurrentFragment;
     private FragmentManager mFragmentManager;
-
     private RadioGroup radioGroup;
 
+
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expert_details);
-        initViews();
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.fragment_subscibe,null);
+        initViews(view);
+        return view;
     }
+    public void initViews(View view){
+        final FragmentSubscibeRecommend recommend = new FragmentSubscibeRecommend();
+        final FragmentSubscibeOrder fragmentSubscibeOrder  = new FragmentSubscibeOrder();
 
-
-    public void initViews(){
-        final Correlation_Class correlation_class = new Correlation_Class();
-
-        final MySelf_Message mySelf_message = new MySelf_Message();
-
-        mFragmentManager = getSupportFragmentManager();
-        showFragment(mySelf_message);
-        radioGroup = (RadioGroup) findViewById(R.id.rg);
+        mFragmentManager =getActivity().getSupportFragmentManager();
+        showFragment(fragmentSubscibeOrder);
+        radioGroup = (RadioGroup) view.findViewById(R.id.rg_subscibe);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // TODO Auto-generated method stub
                 switch (checkedId) {
-                    case R.id.myself_message:
-                        showFragment(mySelf_message);
-
+                    case R.id.rb_subscibe:
+                        showFragment(fragmentSubscibeOrder);
                         break;
-                    case R.id.correlation_class:
-                        showFragment(correlation_class);
+                    case R.id.rb_subscibe1:
+                        showFragment(recommend);
                         break;
                     default:
                         break;
                 }
             }
         });
-
-
     }
-
     private void showFragment(Fragment fragment) {
         if (fragment == null) {
             Log.e("demo", "fragment is null");
@@ -71,7 +65,7 @@ import com.zimu21.zimu.fragment.MySelf_Message;
         if (fragment.isAdded()) {
             fragmentTransaction.show(fragment);
         } else {
-            fragmentTransaction.add(R.id.framelayout_ex, fragment);
+            fragmentTransaction.add(R.id.subscibe1, fragment);
         }
         if (mCurrentFragment != null) {
             fragmentTransaction.hide(mCurrentFragment);
@@ -79,4 +73,5 @@ import com.zimu21.zimu.fragment.MySelf_Message;
         fragmentTransaction.commit();
         mCurrentFragment = fragment;
     }
+
 }

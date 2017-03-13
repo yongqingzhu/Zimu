@@ -13,7 +13,7 @@ import com.zimu21.zimu.R;
 import com.zimu21.zimu.ZimuApplication;
 import com.zimu21.zimu.fragment.FragmentForeign;
 import com.zimu21.zimu.fragment.FragmentInland;
-import com.zimu21.zimu.widge.LocationCity;
+import com.zimu21.zimu.widget.LocationCity;
 
 /**
  * Created by Administrator on 2017/2/27.

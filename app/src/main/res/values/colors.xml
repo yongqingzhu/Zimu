@@ -8,5 +8,6 @@
     <color name="_white">#ffffff</color>
     <color name="_hoary">#f2f2f2</color>
     <color name="green">#ff00ffff</color>
-
+    <color name="white">#ffffff</color>
+    <color name="bg_color">#f1f1f1</color>
 </resources>

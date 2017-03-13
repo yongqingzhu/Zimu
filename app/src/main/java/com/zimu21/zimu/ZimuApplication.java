@@ -3,7 +3,7 @@ package com.zimu21.zimu;
 import android.app.Application;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.zimu21.zimu.widge.LocationCity;
+import com.zimu21.zimu.widget.LocationCity;
 
 public class ZimuApplication extends Application {
 

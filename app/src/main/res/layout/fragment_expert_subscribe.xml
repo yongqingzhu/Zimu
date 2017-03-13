@@ -18,10 +18,7 @@
             android:text="@string/expert_subscribe_toolbar"/>
     </android.support.v7.widget.Toolbar>
 
-
-
     <include layout="@layout/search_tit"></include>
-
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -37,7 +34,6 @@
 
             </android.support.v7.widget.RecyclerView>
         </android.support.v4.widget.SwipeRefreshLayout>
-
 
     </FrameLayout>
 

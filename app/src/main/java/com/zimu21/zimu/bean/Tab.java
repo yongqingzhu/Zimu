@@ -1,17 +1,15 @@
 package com.zimu21.zimu.bean;
 
-/**
- * Created by Administrator on 2017/3/4.
- */
 
 public class Tab {
-    private  int title;
-    private  int icon;
+
+    private int title;
+    private int image;
     private Class fragment;
 
-    public Tab(Class fragment,int title, int icon) {
+    public Tab(int title, int image, Class fragment) {
         this.title = title;
-        this.icon = icon;
+        this.image = image;
         this.fragment = fragment;
     }
 
@@ -23,14 +21,6 @@ public class Tab {
         this.title = title;
     }
 
-    public int getIcon() {
-        return icon;
-    }
-
-    public void setIcon(int icon) {
-        this.icon = icon;
-    }
-
     public Class getFragment() {
         return fragment;
     }
@@ -39,5 +29,11 @@ public class Tab {
         this.fragment = fragment;
     }
 
+    public int getImage() {
+        return image;
+    }
 
+    public void setImage(int image) {
+        this.image = image;
+    }
 }

@@ -1,4 +1,4 @@
-package com.zimu21.zimu.widge;
+package com.zimu21.zimu.widget;
 
 import android.content.Context;
 import android.util.Log;
